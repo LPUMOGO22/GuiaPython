@@ -1,4 +1,4 @@
-site_name: Ejemplo documentación usando MKDocs y Material
+site_name: Introducción a la programación
 #site_url: https://dominio.tld 
 theme:
   name: material
@@ -44,6 +44,11 @@ extra:
       link: https://www.linkedin.com/in/mora-gómez-luis-enrique-5a7411221/
 
 markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -59,6 +64,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
 
 copyright: |
 
