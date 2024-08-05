@@ -1,0 +1,1586 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../02_Escribiendo_Programas_Simples/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Computadoras y programas - Introducción a la programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Computadoras y programas - Introducción a la programación" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/Capitulos/01_Computadoras_y_programas.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Computadoras y programas - Introducción a la programación" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/Capitulos/01_Computadoras_y_programas.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computadoras-y-programas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la programación" class="md-header__button md-logo" aria-label="Introducción a la programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computadoras y programas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Capitulos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Gu%C3%ADas/01_Instalaci%C3%B3n_Python/" class="md-tabs__link">
+          
+  
+  Guías
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la programación" class="md-nav__button md-logo" aria-label="Introducción a la programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Introducción a la programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Capitulos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Capitulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Computadoras y programas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Computadoras y programas
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-la-maquina-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. La máquina universal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-el-poder-de-los-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. El poder de los programas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-que-es-la-informatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. ¿Qué es la informática?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. ¿Qué es la informática?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análisis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experimentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-conceptos-basicos-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Conceptos básicos de hardware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Lenguajes de programación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-la-magia-de-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. La mágia de Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-dentro-de-un-programa-de-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7. Dentro de un programa de Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-caos-y-computadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8. Caos y computadoras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-resumen-de-la-seccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9. Resumen de la sección
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10. Ejercicios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Escribiendo_Programas_Simples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Escribiendo programas simples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_Computo_con_n%C3%BAmeros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computo con números
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Objetos_y_Gr%C3%A1ficos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objetos y gráficos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Secuencias_cadenas_listas_y_archivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secuencias: Cadenas, Listas y Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Definici%C3%B3n_de_funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definición de funcioness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Estructuras_de_decisi%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras de decisión
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_Estructuras_de_bucle_y_booleanos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras de bucle y booleanos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_Simulaci%C3%B3n_y_dise%C3%B1o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulación y diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_Definici%C3%B3n_de_clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definición de clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_Colecciones_de_datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colecciones de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_Dise%C3%B1o_orientado_a_objetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño orientado a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_Dise%C3%B1o_de_algoritmos_y_recursi%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño de algoritmos y recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guías
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Guías
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gu%C3%ADas/01_Instalaci%C3%B3n_Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación de Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gu%C3%ADas/02_Instalaci%C3%B3n_VSCode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación VSCode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="computadoras-y-programas">Computadoras y programas</h1>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>
+<p>Comprender los respectivos roles del hardware y el software en los sistemas informáticos.</p>
+</li>
+<li>
+<p>Aprender qué estudian los informáticos y las técnicas que utilizan. </p>
+</li>
+<li>
+<p>Comprender el diseño básico de una computadora moderna.</p>
+</li>
+<li>
+<p>Comprender la forma y función de los lenguajes de programación informática.</p>
+</li>
+<li>
+<p>Comenzar a utilizar el lenguaje de programación Python.</p>
+</li>
+<li>
+<p>Aprender sobre modelos caóticos y sus implicaciones para la informática.</p>
+</li>
+</ul>
+<hr />
+<h2 id="11-la-maquina-universal">1.1. La máquina universal</h2>
+<p>Casi todo el mundo ha utilizado una computadora en algún momento. Quizás hayas jugado juegos en ella o la hayas usado para escribir un artículo, comprar en línea, escuchar música o conectarte con tus amigos a través de redes sociales. </p>
+<p>Las computadoras se utilizan para predecir el clima, diseñar aviones, hacer películas, administrar negocios, realizar transacciones financieras y controlar fábricas.
+¿Alguna vez te has parado a preguntarte qué es exactamente una computadora? ¿Cómo puede un dispositivo realizar tantas tareas diferentes? Estas preguntas básicas son el punto de partida para aprender sobre computadoras y programación de computadoras.</p>
+<p>Una computadora moderna puede definirse como: <em>"una máquina que almacena y manipula información bajo el control de un programa modificable".</em> </p>
+<p>Hay dos elementos clave en esta definición: </p>
+<ul>
+<li>
+<p><strong>La primera es que las computadoras son dispositivos para manipular información.</strong> </p>
+</li>
+<li>
+<p><strong>La segunda es que las computadoras funcionan bajo el control de un programa modificable.</strong></p>
+</li>
+</ul>
+<p>Comencemos analizando que quiere decir que <strong>las computadoras son dispositivos para manipular información</strong>.</p>
+<p>Esto significa que podemos poner información en una computadora, y ésta puede transformarla en formas nuevas y útiles, y luego generar o mostrar la información para nuestra interpretación.</p>
+<p>Las computadoras no son las únicas máquinas que manipulan información. Cuando usa una calculadora simple para sumar una columna de números, está ingresando información (los números) y la calculadora procesa la información para calcular una suma acumulada que luego se muestra.</p>
+<pre class="mermaid"><code>graph LR
+    A(["Los números &lt;sub&gt;(Entrada)&lt;/sub&gt;"]) --&gt; B(["Calculos aritméticos &lt;sub&gt;(Proceso)&lt;/sub&gt;"]) --&gt; C(["Resultado de la operación &lt;sub&gt;(Salida)&lt;/sub&gt;"])</code></pre>
+<p>Otro ejemplo sencillo es una bomba de gasolina. A medida que llena el tanque, la bomba utiliza ciertas entradas: el precio actual de la gasolina por litro y señales de un sensor que lee la tasa de gasolina que fluye hacia el automóvil. La bomba transforma esta información en información sobre cuánta gasolina consumió y cuánto dinero debe.</p>
+<pre class="mermaid"><code>graph LR
+    A(["Precio y cantidad de litros &lt;sub&gt;(Entrada)&lt;/sub&gt;"]) --&gt; B(["Calculos aritméticos &lt;sub&gt;(Proceso)&lt;/sub&gt;"]) --&gt; C(["Total a pagar &lt;sub&gt;(Salida)&lt;/sub&gt;"])</code></pre>
+<p>No consideraríamos ni la calculadora ni el surtidor de gasolina como <em>computadoras completas</em>, porque son sistemas diseñados para realizar una tarea única y específica, mientras que una computadora completa <strong>funciona bajo el control de un programa modificable.</strong> ¿Qué significa esto exactamente?</p>
+<div class="admonition info">
+<p class="admonition-title">¿Qué es un programa?</p>
+<p>Un <strong>programa</strong> es un conjunto detallado de instrucciones paso a paso que le dicen a una computadora exactamente qué hacer.</p>
+</div>
+<p>Si cambiamos el programa, entonces la computadora realiza una secuencia diferente de acciones y, por lo tanto, realiza una tarea diferente. Es esta flexibilidad la que permite que tu PC sea en un momento un procesador de textos, en el siguiente un planificador financiero y, más tarde, un juego de arcade. La máquina sigue siendo la misma, pero el programa que la controla cambia.</p>
+<p>Cada computadora es solo una máquina para ejecutar (realizar) programas. Hay muchos tipos diferentes de computadoras. Es posible que estés familiarizado con MACs, PC, laptops, tabletas y teléfonos inteligentes, pero hay literalmente miles de otros tipos de computadoras, tanto reales como teóricas. Uno de los descubrimientos notables de la informática es la constatación de que todas estas computadoras diferentes tienen el mismo poder; Con una programación adecuada, cada computadora puede hacer básicamente todas las cosas que cualquier otra computadora puede hacer. En este sentido, la PC que puedas tener sobre tu escritorio es realmente una máquina universal. Puede hacer cualquier cosa que desees, siempre que puedas describir la tarea a realizar con suficiente detalle. ¡Esa sí que es una máquina poderosa!</p>
+<hr />
+<h2 id="12-el-poder-de-los-programas">1.2. El poder de los programas</h2>
+<p>Ya has aprendido una importante lección de informática: <strong>el software (programas) gobierna el hardware (la máquina física).</strong> </p>
+<p>Es el software el que determina lo que cualquier computadora puede hacer. Sin software, las computadoras serían simplemente pisapapeles costosos. El proceso de creación de software se llama <strong>programación</strong> y ese es el tema principal de esta guía.</p>
+<p>La programación informática es una actividad desafiante. La buena programación requiere la capacidad de ver el panorama general y al mismo tiempo prestar atención a los detalles minuciosos. No todo el mundo tiene el talento para convertirse en un programador de primera, del mismo modo que no todo el mundo tiene las habilidades para ser un atleta profesional. Sin embargo, prácticamente cualquier persona puede aprender a programar computadoras. Con un poco de paciencia y esfuerzo de tu parte, esta guía te ayudará a convertirte en programador.</p>
+<p>Hay muchas buenas razones para aprender a programar. La programación es una parte fundamental de la informática y, por lo tanto, es importante para cualquier persona interesada en convertirse en un profesional de la informática. Pero otros también pueden beneficiarse de la experiencia. Las computadoras se han convertido en una herramienta común en nuestra sociedad. Comprender las fortalezas y limitaciones de esta herramienta requiere conocimientos de programación. Los no programadores a menudo se sienten esclavos de sus computadoras. Los programadores, sin embargo, tienen realmente el control. Si deseas aprovechar al máximo tu computadora, debes aprender a programar.</p>
+<p>La programación también puede ser muy divertida. Es una actividad intelectualmente atractiva que permite a las personas expresarse a través de creaciones útiles y, a veces, notablemente hermosas. Lo creas o no, muchas personas escriben programas de computadora como pasatiempo. La programación también desarrolla valiosas habilidades para la resolución de problemas, especialmente la capacidad de analizar sistemas complejos reduciéndolos a interacciones de subsistemas comprensibles.</p>
+<hr />
+<h2 id="13-que-es-la-informatica">1.3. ¿Qué es la informática?</h2>
+<p>Quizás te sorprenda saber que la informática no es el estudio de las computadoras. 
+Un famoso informático llamado <a href="https://es.wikipedia.org/wiki/Edsger_Dijkstra">Edsger Dijkstra</a> bromeó una vez diciendo que las computadoras son para la informática lo que los telescopios son para la astronomía. La computadora es una herramienta importante en informática, pero no es en sí misma el objeto de estudio. Dado que una computadora puede llevar a cabo cualquier proceso que podamos describir, la verdadera pregunta es: <strong>"¿Qué procesos podemos describir?"</strong> </p>
+<p>Para decirlo de otra manera, la cuestión fundamental de la informática es simplemente <strong>"¿Qué información se puede procesar automáticamente?"</strong> Los informáticos utilizan numerosas técnicas de investigación para responder a esta pregunta. Los tres principales son: </p>
+<ul>
+<li>
+<p><a href="./#diseño">El diseño</a> </p>
+</li>
+<li>
+<p><a href="./#análisis">El análisis</a>  </p>
+</li>
+<li>
+<p><a href="./#experimentación">La experimentación</a></p>
+</li>
+</ul>
+<h3 id="diseno">Diseño</h3>
+<p>Una manera de demostrar que un problema particular puede resolverse es <strong>diseñar</strong> realmente una solución. Es decir, desarrollamos un proceso paso a paso para lograr el resultado deseado. Los informáticos llaman a esto algoritmo. Es una palabra elegante que básicamente significa "receta". El diseño de algoritmos es una de las facetas más importantes de la informática. En esta guía encontrarás técnicas para diseñar e implementar algoritmos.</p>
+<details class="note">
+<summary>Definición de algoritmo</summary>
+<p>En matemáticas, lógica, ciencias de la computación y disciplinas relacionadas, un algoritmo es un conjunto de instrucciones o reglas definidas, no-ambiguas, ordenadas y finitas que permite, típicamente, solucionar un problema.</p>
+</details>
+<p>Una debilidad del diseño es que sólo puede responder a la pregunta "¿Qué es automatizable?". Si puedo idear un algoritmo, entonces el problema tiene solución. Sin embargo, no encontrar un algoritmo no significa que el problema no tenga solución. Puede significar que simplemente no soy lo suficientemente inteligente o que aún no se me ha ocurrido la idea correcta. Aquí es donde entra el <strong>análisis</strong>.</p>
+<h3 id="analisis">Análisis</h3>
+<p>El análisis es el proceso de examinar algoritmos y problemas matemáticamente. Los informáticos han demostrado que algunos problemas aparentemente simples no pueden resolverse mediante ningún algoritmo. Otros problemas son intratables. Los algoritmos que resuelven estos problemas toman demasiado tiempo o requieren demasiada memoria para tener valor práctico. El análisis de algoritmos es una parte importante de la informática; A lo largo de esta guía abordaremos algunos de los principios fundamentales. La sección <a href="../13_Dise%C3%B1o_de_algoritmos_y_recursi%C3%B3n/">Diseño de algortimos y recursión</a> tiene ejemplos de problemas irresolubles e intratables.</p>
+<h3 id="experimentacion">Experimentación</h3>
+<p>Algunos problemas son demasiado complejos o están mal definidos para prestarse a un análisis. En tales casos, los informáticos se basan en la experimentación; en realidad implementan sistemas y luego estudian el comportamiento resultante. Incluso cuando se realiza un análisis teórico, a menudo se necesita experimentación para verificar y refinar el análisis. Para la mayoría de los problemas, lo fundamental es si se puede construir un sistema que funcione y sea confiable. A menudo requerimos pruebas empíricas del sistema para determinar que se ha cumplido este objetivo. Cuando comiences a escribir tus propios programas, tendrás muchas oportunidades para observar tus soluciones en acción.</p>
+<p>Hemos definido la informática en términos de diseño, análisis y evaluación de algoritmos, y este es sin duda el núcleo de la disciplina académica. Hoy en día, sin embargo, los informáticos participan en actividades muy amplias, todas las cuales caen bajo el paraguas general de la informática. Algunos ejemplos incluyen computación móvil, redes, interacción persona-computadora, inteligencia artificial, ciencia computacional (uso de computadoras poderosas para modelar procesos científicos), bases de datos y minería de datos, ingeniería de software, diseño web y multimedia, producción musical, sistemas de gestión de información y seguridad informática. Dondequiera que se existan computadoras, se aplican las habilidades y conocimientos de la informática.</p>
+<hr />
+<h2 id="14-conceptos-basicos-de-hardware">1.4. Conceptos básicos de hardware</h2>
+<p>No es necesario conocer todos los detalles de cómo funciona una computadora para ser un programador exitoso, pero comprender los principios subyacentes te ayudará a dominar el procedimiento para poner nuestros programas en acción. Es un poco como conducir un coche. Saber un poco sobre los motores de combustión interna ayuda a explicar por qué hay que hacer cosas como llenar el tanque de gasolina, arrancar el motor, pisar el acelerador, etc. Podrías aprender a conducir simplemente memorizando qué hacer, pero un poco más de conocimiento hace que todo el proceso sea mucho más comprensible. Tomémonos un momento para mirar qué hay dentro de tu computadora.</p>
+<pre class="mermaid"><code>graph LR
+    input[Dispositivos de Entrada] --&gt; A[" "]
+
+    subgraph A[" "]
+        CPU --&gt; memory[Memoria Principal]
+        memory[Memoria Principal] --&gt; CPU
+    end
+
+    A --&gt; secondary_memory[Memoria Secundaria]
+    secondary_memory[Memoria Secundaria] --&gt; A
+    A --&gt; output[Dispositivos de Salida]</code></pre>
+<p>Aunque diferentes computadoras pueden variar significativamente en detalles específicos, en general todas las computadoras digitales modernas son notablemente similares. El gráfico anterior muestra una vista funcional de una computadora. La unidad central de procesamiento (CPU) es el "cerebro" de la máquina. Aquí es donde se llevan a cabo todas las operaciones básicas de la computadora. La CPU puede realizar operaciones aritméticas simples como sumar dos números y también puede realizar operaciones lógicas como comparar si dos números son iguales.</p>
+<p>La memoria almacena programas y datos. La CPU puede acceder directamente sólo a la información almacenada en la memoria principal, llamada RAM que significa "Memoria de Acceso Aleatorio". La memoria principal es rápida, pero también volátil. Es decir, cuando se corta la alimentación, la información de la memoria se pierde. Por tanto, también debe haber alguna memoria secundaria que proporcione un almacenamiento más permanente.</p>
+<p>En una computadora personal moderna, la memoria secundaria suele ser una unidad de disco duro interna (HDD) o una unidad de estado sólido (SSD). Un HDD almacena información como patrones magnéticos en un disco giratorio, mientras que un SSD emplea circuitos electrónicos conocidos como memoria flash. La mayoría de las computadoras también admiten medios extraíbles para la memoria secundaria, como "memorias USB" (también una forma de memoria flash) y DVD (discos versátiles digitales), que almacenan información como patrones ópticos que se leen y escriben mediante un láser.</p>
+<p>Los humanos interactúan con la computadora a través de dispositivos de entrada y salida. Probablemente estés familiarizado con dispositivos comunes como el teclado, el mouse y el monitor (pantalla de video). El CPU procesa la información de los dispositivos de entrada y puede transferirse a la memoria principal o secundaria. De manera similar, cuando es necesario mostrar información, la CPU la envía a uno o más dispositivos de salida.</p>
+<p>Entonces, ¿qué sucede cuando inicias tu juego o programa de procesamiento de textos favorito? Primero, las instrucciones que componen el programa se copian desde la persistente memoria secundaria a la volátil memoria principal de la computadora.</p>
+<p>Una vez cargadas las instrucciones, la CPU comienza a ejecutar el programa.</p>
+<p>Técnicamente, la CPU sigue un proceso llamado ciclo de búsqueda-ejecución. La primera instrucción se recupera de la memoria, se decodifica para descubrir qué representa, y ejecuta la acción apropiada. Luego busca, decodifica y ejecuta la siguiente instrucción. El ciclo continúa, instrucción tras instrucción. En realidad, esto es todo lo que hace la computadora desde el momento en que la enciendes hasta que la vuelves a apagar: buscar, decodificar y ejecutar. No parece muy emocionante, ¿verdad? Pero la computadora puede ejecutar este flujo de instrucciones simples a una velocidad vertiginosa, pasando por miles de millones de instrucciones cada segundo. Si reúne suficientes instrucciones sencillas en la forma correcta, la computadora hará cosas asombrosas.</p>
+<hr />
+<h2 id="15-lenguajes-de-programacion">1.5. Lenguajes de programación</h2>
+<p>Recuerda que un programa es sólo una secuencia de instrucciones que le dicen a una computadora qué hacer. Obviamente, debemos proporcionar esas instrucciones en un idioma que una computadora pueda entender. Sería bueno si pudiéramos decirle a una computadora qué hacer usando nuestra lengua materna, como lo hacen en las películas de ciencia ficción. Los científicos computacionales han hecho grandes avances en esta dirección; Es posible que estés familiarizado con tecnologías como Siri (Apple), Google Now (Android) y Cortana (Microsoft). Pero como puede atestiguar cualquiera que haya utilizado seriamente estos sistemas, diseñar un programa informático para comprender plenamente el lenguaje humano sigue siendo un problema sin resolver, aunque cada vez es más facil interactuar con IAs como los chats que usan modelos como GPT.</p>
+<p>Incluso si las computadoras pudieran entendernos, los lenguajes humanos no son muy adecuados para describir algoritmos complejos. El lenguaje natural está plagado de ambigüedad e imprecisión. Por ejemplo, si digo "Vi al hombre en el parque con el telescopio", ¿tenía yo el telescopio o el hombre? ¿Y quién estaba en el parque? Nos entendemos la mayor parte del tiempo sólo porque todos los humanos compartimos un vasto acervo de conocimientos y experiencias comunes. Incluso entonces, la falta de comunicación es algo común.</p>
+<p>Los matemáticos/informáticos han solucionado este problema diseñando notaciones para expresar los cálculos de una manera exacta e inequívoca. Estas notaciones especiales se denominan lenguajes de programación. Cada estructura en un lenguaje de programación tiene una forma precisa (su sintaxis) y un significado preciso (su semántica). </p>
+<p>Un lenguaje de programación es algo así como un código para escribir las instrucciones que seguirá una computadora. De hecho, los programadores suelen referirse a sus programas como código de computadora, y el proceso de escribir un algoritmo en un lenguaje de programación se llama codificación.</p>
+<p>Python es un ejemplo de lenguaje de programación y es el lenguaje que usaremos a lo largo de esta guía. Es posible que hayas oído hablar de otros lenguajes de uso común, como C++, Java, Javascript, Ruby, Perl, Scheme o BASIC. Los informáticos han desarrollado literalmente miles de lenguajes de programación, y los propios lenguajes evolucionan con el tiempo dando lugar a múltiples versiones, a veces muy diferentes. Aunque estos lenguajes difieren en muchos detalles, todos comparten la propiedad de tener una sintaxis y una semántica bien definidas y sin ambigüedades.</p>
+<p>Todos los lenguajes mencionados anteriormente son ejemplos de lenguajes informáticos de alto nivel. Aunque son precisos, están diseñados para ser utilizados y comprendidos por humanos. Estrictamente hablando, el hardware de una computadora sólo puede comprender un lenguaje de muy bajo nivel conocido como lenguaje de máquina.</p>
+<p>Supongamos que queremos que la computadora sume dos números. Las instrucciones que realmente lleva a cabo la CPU podrían ser algo como esto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    LOAD R1, 2001   ; Cargar el número desde la dirección de memoria 2001 en el registro R1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    LOAD R2, 2002   ; Cargar el número desde la dirección de memoria 2002 en el registro R2
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ADD R1, R2      ; Sumar el contenido de los registros R1 y R2 y almacenar el resultado en R1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    STORE 2003, R1  ; Almacenar el contenido del registro R1 en la dirección de memoria 2003
+</code></pre></div>
+<p>Parece mucho trabajo sumar dos números, ¿no? En realidad, es incluso más complicado que esto porque las instrucciones y los números se representan en notación binaria (como secuencias de O y 1).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0001 01 0000 0111 1101 ; LOAD R1, 2001
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    0001 10 0000 0111 1101 ; LOAD R2, 2002
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    0010 01 10 ; ADD R1, R2
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    0011 01 0000 0111 1101 ; STORE 2003, R1
+</code></pre></div>
+<p>En un lenguaje de alto nivel como Python, la suma de dos números se puede expresar de forma más natural: c = a + b. </p>
+<p>Esto es mucho más fácil de entender para nosotros, pero necesitamos alguna forma de traducir el lenguaje de alto nivel al lenguaje de máquina que la computadora pueda ejecutar.</p>
+<p>Hay dos formas de hacer esto: <strong>un lenguaje de alto nivel puede compilarse o interpretarse</strong>.</p>
+<p>Un <strong>compilador</strong> es un programa informático complejo que toma otro programa escrito en un lenguaje de alto nivel y lo traduce a un programa equivalente en el lenguaje de máquina de alguna computadora.</p>
+<p>El <em>programa de alto nivel</em> se llama <em>código fuente</em> y el <em>código de máquina</em> resultante es un <em>programa ejecutable</em> con el que la computadora puede interactuar directamente.</p>
+<p>El usuario final solamente abre (ejecuta) el <em>programa ejecutable</em> e interactúa con él ingresando datos (entradas) y recibiendo los resultados (salidas).</p>
+<pre class="mermaid"><code>graph LR
+    A(["Código Fuente (Programa)"]) --&gt; B[Compilador] 
+    B[Compilador] --&gt; C([Código máquina])
+    C -.-&gt; D 
+    subgraph sub1 [ ]
+        E([Entradas]) --&gt; D[Programa Ejecutable]
+        D --&gt; F([Salidas])
+    end</code></pre>
+<p>Un <strong>intérprete</strong> es un programa que simula una computadora que comprende un lenguaje de alto nivel. En lugar de traducir el programa fuente a un equivalente en lenguaje de máquina, el intérprete analiza y ejecuta el código fuente instrucción por instrucción según sea necesario.</p>
+<pre class="mermaid"><code>graph LR
+    A(["Código Fuente (Programa)"]) --&gt; B[Computadora corriendo un intérprete]
+    D([Entradas]) --&gt; B
+    B --&gt; E([Salidas])</code></pre>
+<p>La diferencia entre interpretar y compilar es que la compilación es una traducción de una sola vez; Una vez compilado un programa, se puede ejecutar una y otra vez sin necesidad del compilador o del código fuente. En el caso interpretado, el intérprete y la fuente son necesarios cada vez que se ejecuta el programa. Los programas compilados tienden a ser más rápidos, ya que la traducción se realiza de una vez por todas, pero los lenguajes interpretados se prestan a un entorno de programación más flexible ya que los programas se pueden desarrollar y ejecutar de forma interactiva.</p>
+<p>El proceso de traducción destaca otra ventaja que tienen los lenguajes de alto nivel sobre el lenguaje de máquina: la portabilidad. El lenguaje de máquina de una computadora lo crean los diseñadores de la CPU en particular. Cada tipo de computadora tiene su propio lenguaje de máquina. </p>
+<p>Un programa para el procesador Intel i7 de tu laptop no funcionará directamente en una la CPU ARMv8 de tu teléfono inteligente. Por otro lado, un programa escrito en un lenguaje de alto nivel se puede ejecutar en muchos tipos diferentes de computadoras siempre que exista un compilador o intérprete adecuado (que no es más que un programa más). Como resultado, podemos ejecutar exactamente el mismo programa Python en una computadora portátil y en una tableta; Aunque tienen CPU diferentes, ambos cuentan con un intérprete de Python.</p>
+<hr />
+<h2 id="16-la-magia-de-python">1.6. La mágia de Python</h2>
+<p>Ahora que tienes todos los detalles técnicos, es hora de empezar a divertirte con Python. El objetivo final es hacer que la computadora cumpla nuestras órdenes. Para ello, escribiremos programas que controlen los procesos computacionales dentro de la máquina. Ya has visto que no hay magia en este proceso, pero en cierto modo la programación parece mágica.
+Los procesos computacionales dentro de la computadora son como espíritus mágicos que podemos aprovechar para nuestro trabajo. </p>
+<p>Desafortunadamente, esos espíritus sólo entienden un lenguaje muy arcano que nosotros desconocemos. Lo que necesitamos es un genio amigable que pueda dirigir a los espíritus para que cumplan nuestros deseos. Nuestro genio es un intérprete de Python. Podemos dar instrucciones al intérprete de Python y él dirige los espíritus subyacentes para llevar a cabo nuestras demandas. </p>
+<p>Nos comunicamos con el genio a través de un lenguaje especial de hechizos y encantamientos (es decir, Python). La mejor manera de empezar a aprender sobre Python es dejar salir a nuestro genio de la botella y probar algunos hechizos.</p>
+<p>Con la mayoría de las instalaciones de Python, puede iniciar un intérprete de Python en un modo interactivo llamado shell. Un shell le permite escribir comandos de Python y luego muestra el resultado de ejecutarlos. Los detalles para iniciar un shell difieren según las distintas instalaciones. Si está utilizando la distribución estándar de Python para PC o Mac de <a href="https://www.python.org/">www.python.org</a>, debes tener una aplicación llamada IDLE (Integrated Development and Learning Environment) que te permitirá interactuar con Python </p>
+<p>Si aún no tienes Python instalado, lee nuestra <a href="../../Gu%C3%ADas/01_Instalaci%C3%B3n_Python/">guía de instalación</a>.</p>
+<p>Comencemos abriendo la aplicación IDLE.</p>
+<p><img alt="IMG-01" src="../../assets/01.png" /></p>
+<p>Cuando inicies IDLE (u otro shell de Python) por primera vez, deberías ver algo como esto:</p>
+<p><img alt="IMG-02" src="../../assets/02.png" /></p>
+<p>El mensaje de apertura exacto depende de la versión de Python que estés ejecutando y del sistema en el que estés trabajando. La parte importante es la última línea; el  <code>&gt;&gt;&gt;</code> es un mensaje de Python que indica que nuestro genio (el intérprete de Python) está esperando que le demos una orden. En los lenguajes de programación, un comando completo se llama declaración.</p>
+<p>Aquí hay un ejemplo de interacción con un shell de Python:</p>
+<p><img alt="IMG-03" src="../../assets/03.png" /></p>
+<p>Aquí he probado tres ejemplos utilizando la declaración de impresión (<code>print</code>) de Python. </p>
+<ul>
+<li>
+<p>La primera declaración le pide a Python que muestre la frase literal <em>"Hola mundo!"</em>. Python responde en la siguiente línea imprimiendo la frase. </p>
+</li>
+<li>
+<p>La segunda declaración de impresión le pide a Python que imprima la suma de <em>2 y 3</em>. </p>
+</li>
+<li>
+<p>La tercera impresión combina estas dos ideas. Python imprime la parte entre comillas, "<em>2 + 3 =</em>", seguida del resultado de sumar 2 + 3, que es <em>5</em>.</p>
+</li>
+</ul>
+<p>Este tipo de interacción de shell es una excelente manera de probar cosas nuevas en Python. A lo largo de esta guía se encuentran fragmentos de sesiones interactivas. Cuando veas el mensaje de Python <code>&gt;&gt;&gt;</code> en un ejemplo, debería indicarte que se está ilustrando una sesión interactiva. Es una buena idea iniciar su propio shell de Python y probar los ejemplos.</p>
+<p>Por lo general, queremos ir más allá de los fragmentos de una línea y ejecutar una secuencia completa de declaraciones. Python nos permite juntar una secuencia de declaraciones para crear un comando o función completamente nueva. A continuación se muestra un ejemplo de cómo crear una nueva función llamada "<strong>hola</strong>":</p>
+<p><img alt="IMG-04" src="../../assets/04.png" /></p>
+<p>La primera línea le dice a Python que estamos definiendo una nueva función y la llamaremos <strong>hola</strong>. Las siguientes líneas tienen sangría para mostrar que son parte de la función <strong>hola</strong>. </p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Algunos shells imprimirán puntos suspensivos ["<code>...</code>"] al principio de las líneas con sangría.</p>
+</div>
+<p>La línea en blanco al final (que se obtiene presionando la tecla <code>&lt;ENTER&gt;</code> dos veces) le permite a Python saber que la definición ha finalizado y el shell responde con <code>&gt;&gt;&gt;</code> para que continuemos interactuando. Ten en cuenta que escribir la definición no hizo que Python imprimiera nada todavía. Le hemos dicho a Python lo que debería suceder cuando la función <strong>hola</strong> se usa como comando; En realidad, todavía no le hemos pedido a Python que lo realice.</p>
+<p>Una función se invoca (o llama) escribiendo su nombre seguido de paréntesis. Esto es lo que sucede cuando usamos nuestro comando <strong>hola</strong>:</p>
+<p><img alt="IMG-05" src="../../assets/05.png" /></p>
+<p>¿Ves lo que esto hace? Las dos declaraciones de impresión de la definición de la función <strong>hola</strong> se ejecutan en secuencia.</p>
+<p>Quizás te preguntes acerca de los paréntesis en la definición y el uso de <strong>hola</strong>. Los comandos pueden tener partes <em>variables</em> llamadas parámetros (también llamados argumentos) que se colocan entre paréntesis. Veamos un ejemplo de un saludo personalizado usando un parámetro. Primero la definición:</p>
+<p><img alt="IMG-06" src="../../assets/06.png" /></p>
+<p>Ahora podemos utilizar nuestro saludo personalizado.</p>
+<p><img alt="IMG-07" src="../../assets/07.png" /></p>
+<p>¿Puedes ver lo que está pasando aquí? Al usar <strong>saludo</strong> podemos enviar diferentes nombres para personalizar el resultado. También puedes notar que esto se parece a las declaraciones impresas anteriores. En Python, imprimir es un ejemplo de función incorporada. Cuando llamamos a la función de <code>print()</code>, los parámetros entre paréntesis le indican a la función qué imprimir.</p>
+<p>Discutiremos los parámetros en detalle más adelante. Por el momento lo importante a recordar es que los paréntesis deben incluirse después del nombre de la función siempre que queramos ejecutar una función. Esto es cierto incluso cuando no se proporcionan parámetros. Por ejemplo, puede crear una línea de salida en blanco usando <code>print</code> sin ningún parámetro.</p>
+<p><img alt="IMG-08" src="../../assets/08.png" /></p>
+<p>Pero si escribes sólo el nombre de la función, omitiendo los paréntesis, la función en realidad no se ejecutará. En cambio, una sesión interactiva de Python mostrará algún resultado que indique a qué función se refiere ese nombre, como muestra esta interacción:</p>
+<p><img alt="IMG-09" src="../../assets/09.png" /></p>
+<p>El texto extraño 0x101211da0 es la ubicación (dirección) en la memoria de la computadora donde se almacena la definición de la función de saludo. Si estás probando esto en tu propia computadora, es casi seguro que verás una dirección diferente.</p>
+<p>Un problema al ingresar funciones interactivamente en un shell de Python como lo hicimos con los ejemplos de <strong>hola</strong> y <strong>saludo</strong> es que las definiciones se pierden cuando salimos del shell. Si queremos volver a utilizarlos la próxima vez, tendremos que escribirlos de nuevo. Los programas generalmente se crean escribiendo definiciones en un archivo separado llamado <strong>módulo</strong> o <strong>script</strong>. Este archivo se guarda en la memoria secundaria para que pueda usarse una y otra vez.</p>
+<p>Un archivo de <strong>módulo</strong> es simplemente un archivo de texto y puede crear uno usando cualquier aplicación para editar texto, como un bloc de notas o un procesador de textos, siempre que guarde su programa como un archivo de "texto sin formato". Un tipo especial de aplicación conocida como <strong>Entorno de Desarrollo Integrado (IDE)</strong> simplifica el proceso. </p>
+<p>Un IDE está diseñado específicamente para ayudar a los programadores a escribir programas e incluye funciones como sangría automática, resaltado de colores y desarrollo interactivo. IDLE es un buen ejemplo. Hasta ahora hemos estado usando IDLE como shell de Python, pero en realidad es un entorno de desarrollo simple pero completo.</p>
+<p>Ilustremos el uso de un archivo de módulo escribiendo y ejecutando un programa completo. Nuestro programa explorará un concepto matemático conocido como caos.</p>
+<p>A lo largo de la guía desarrollaremos varios programas, por lo que sugeriría que crees una carpeta para mantener todos tus programas organizados y juntos en un espacio dedicado en tu área de documentos personales.</p>
+<p>El proceso se puede hacer de diferentes maneras, pero yo ilustraré como hacerlo mediante una línea de comandos (<strong>Terminal</strong> en caso de Mac y <strong>PowerShell</strong> en caso de Windows) y el editor de código VSCode, si no tienes instalado el editor de código te sugerimos seguir nuestra guía de instalación de <a href="../../Gu%C3%ADas/02_Instalaci%C3%B3n_VSCode/">VSCode</a>.</p>
+<p>Comencemos abriendo la aplicación de línea de comandos correspondiente. </p>
+<p><strong>MacOS</strong></p>
+<ul>
+<li>
+<p>Presiona la combinación de teclas <code>&lt;COMMAND&gt;</code> y <code>&lt;ESPACIO&gt;</code> (cuando hablemos de combinaciones de teclas escibiremos las diferentes teclas separadas por un símbolo <code>+</code>, ejemplo:<code>&lt;COMMAND&gt; + &lt;ESPACIO&gt;</code>) para desplegar el buscador spotlight.</p>
+<p><img alt="IMG-10" src="../../assets/10.png" /></p>
+</li>
+<li>
+<p>Escribe "Terminal" en la barra de búsqueda de spotlight.</p>
+<p><img alt="IMG-11" src="../../assets/11.png" /></p>
+</li>
+<li>
+<p>Notarás que una aplicación está resaltada en gris, bastará con presionar la tecla <code>&lt;ENTER&gt;</code> para ejecutarla y abrirá una pantalla (la interfaz difererirá de la que yo muestro), a partir de este momento me referiré a esta interfaz que acabamos de abrir como <strong>shell</strong>.</p>
+<p><img alt="IMG-12" src="../../assets/12.png" /></p>
+</li>
+</ul>
+<p><strong>Windows</strong></p>
+<ul>
+<li>
+<p>Presiona la combinación de teclas <code>&lt;WINDOWS&gt;</code> y <code>&lt;R&gt;</code> (cuando hablemos de combinaciones de teclas escibiremos las diferentes teclas separadas por un símbolo <code>+</code>, ejemplo:<code>&lt;WINDOWS&gt; + &lt;R&gt;</code>) para desplegar la aplicación run.</p>
+<p><img alt="IMG-13" src="../../assets/13.png" /></p>
+</li>
+<li>
+<p>Escribe "powershell" en la barra de búsqueda.</p>
+<p><img alt="IMG-14" src="../../assets/14.png" /></p>
+</li>
+<li>
+<p>Para ejecutar la aplicación bastará con presionar la tecla <code>&lt;ENTER&gt;</code> o dar click en el botón "<code>OK</code>". Abrirá una pantalla como la siguiente, a partir de este momento me referiré a esta interfaz que acabamos de abrir como <strong>shell</strong>.</p>
+<p><img alt="IMG-15" src="../../assets/15.png" /></p>
+</li>
+</ul>
+<p>Deberemos crear la carpeta donde guardaremos los programas que realicemos durante esta guía, situarnos en ella y abrirla en el editor de código, para ello dentro de nuestra shell (no importa si es Windows o Mac) ingresaremos los siguientes comandos:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir ./intro_progra
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd ./intro_progra
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>code .
+</code></pre></div></p>
+<p><img alt="IMG-16" src="../../assets/16.png" /></p>
+<p>Si todo el paso anterior se ejecutó correctamente, se debió abrir la aplicación Visual Studio Code, primero encontraremos una advertencia que nos pregunta si confiamos en el autor de la carpeta "intro_progra", como nosotros mismos somos el autor, sí podemos confiar, así que debemos dar click en el botón que dice "Sí, confío en los autores (Yes, I trust the authors)".</p>
+<p><img alt="IMG-17" src="../../assets/17.png" /></p>
+<p>Se removerá la ventana de autorización y tendremos nuestro editor listo para trabajar.</p>
+<p><img alt="IMG-18" src="../../assets/18.png" /></p>
+<p>Comenzaremos ubicando el explorador de archivos, si no se ha personalizado la interfaz, lo encontraremos en la parte izquierda.</p>
+<p><img alt="IMG-19" src="../../assets/19.png" /></p>
+<p>En el explorador tendremos varíos íconos, de izquierda a derecha, el primero nos permitirá crear un nuevo archivo, el segundo crear una nueva carpeta, el tercero refrescar el explorador y el cuarto colapsar los folder abiertos en el explorador, de momento solo interactuaremos con el primer botón.</p>
+<p>Damos click en él e inmediatamente por debajo se habilitará un recuadro que nos permitirá escribir, ahí ingresaremos el nombre de nuestro fichero, en este caso será "<em>01_caos.py</em>" y una vez terminemos de escribir presionaremos la tecla <code>&lt;ENTER&gt;</code>.</p>
+<p><img alt="IMG-20" src="../../assets/20.png" /></p>
+<p>En la parte derecha del editor encontraremos nuestro archivo <em>01_caos.py</em> listo para ser editado, ahí pegamos el siguiente código.</p>
+<p><img alt="IMG-21" src="../../assets/21.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># caos.py</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Un programa que ilustra una conducta caótica</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Este programa ilustra una función caótica&quot;</span><span class="p">)</span> 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número entre 0 y 1: &quot;</span><span class="p">))</span> 
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="n">x</span> <span class="o">=</span> <span class="mf">3.9</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<p>Una vez que lo hayas escrito, notarás que el ícono del explorador tiene una alerta azul con un número 1, esto indica que dentro de nuestro entorno de trabajo existe un archivo que se ha editado, pero no se han guardado los cambios. </p>
+<p><img alt="IMG-22" src="../../assets/22.png" /></p>
+<p>Para guardar el script usamos la combinación de teclas <code>&lt;Ctrl+S&gt;</code> en Windows y <code>&lt;Command+S&gt;</code> en Mac.</p>
+<p>Tú editor se debería ver de la siguiente manera, sin alertas a la izquierda y con el código completo a la derecha.</p>
+<p><img alt="IMG-23" src="../../assets/23.png" /></p>
+<p>En este punto, es posible que estés intentando encontrarle sentido a lo que acabas de copiar. Puedes ver que este ejemplo en particular contiene líneas para definir una nueva función llamada "<em>main</em>". (Los programas suelen colocarse en una función llamada <em>main</em>). </p>
+<p>La última línea del archivo (línea 11) es el comando para invocar esta función. No te preocupes si no comprendes qué hace realmente main; lo discutiremos en la siguiente sección. El punto aquí es que una vez que tenemos un programa guardado en un archivo de módulo como este, podemos ejecutarlo cuando queramos.</p>
+<p>Nuestro programa se puede ejecutar de varias maneras diferentes que dependen del sistema operativo real y del entorno de programación que estés utilizando.</p>
+<p>Nosotros lo ejecutaremos desde nuestra shell, para ello debemos retomar nuestra shell desde la que creamos la carpeta y abrimos el VSCode.</p>
+<p>Si estamos en <strong>Windows</strong> nuestra shell debe verse así.</p>
+<p><img alt="IMG-16" src="../../assets/16.png" /></p>
+<p>Si estamos en <strong>Mac</strong> nuestra shell debe verse así.</p>
+<p><img alt="IMG-24" src="../../assets/24.png" /></p>
+<p>El comando que nos ejecutar nuestro programa en <strong>Windows</strong> es:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>01_caos.py
+</code></pre></div>
+<p><img alt="IMG-25" src="../../assets/25.png" /></p>
+<p>El comando que nos ejecutar nuestro programa en <strong>Mac</strong> es:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>01_caos.py
+</code></pre></div>
+<p><img alt="IMG-26" src="../../assets/26.png" /></p>
+<p>El programa en ejecución le pide al usuario que ingrese un número entre 0 y 1 yo escribiré ".25".</p>
+<p><img alt="IMG-27" src="../../assets/27.png" /></p>
+<p>Lo que ocurrió aquí es que le indicamos a la computadora que ejecutará la serie de instrucciones que definimos en el programa <strong>01_caos.py</strong> con Python, Python interpreta el módulo (programa) de arriba a abajo, línea por línea. Es como si los hubiéramos escrito uno por uno en el indicador interactivo de Python. </p>
+<p>La definición en el módulo hace que Python cree la función principal (líneas 4 a 9). La última línea (línea 11) de este módulo hace que Python invoque la función principal, ejecutando así nuestro programa. </p>
+<p>El programa ya en ejecución le pide al usuario que ingrese un número entre 0 y 1 y luego imprime una serie de 10 números.</p>
+<details class="note">
+<summary>Compilación/interpretación en Python</summary>
+<p>Python es un lenguaje interpretado, pero cuenta con un proceso híbrido de compilación/interpretación.</p>
+<p>Si ejecutamos el código fuente mediante el comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>01_caos.py
+</code></pre></div>
+<p>Solamente estamos interpretando. Sin embargo, es posible que el código fuente de Python en el archivo del módulo (01_caos.py) se compile en instrucciones más primitivas llamadas <strong>código de bytes</strong>.</p>
+<p>¿Por qué haríamos eso?</p>
+<p>Porque tener un archivo en código de bytes hace que la ejecución sea más rápida la segunda vez. Si el código de un módulo se va a emplear en repetidas ocasiones, vale la pena que exista en código de bytes.</p>
+<p>Para que Python compile nuestro módulo, empleamos el comando:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python<span class="w"> </span>-m<span class="w"> </span>py_compile<span class="w"> </span>01_caos.py
+</code></pre></div>
+Este comando no interpretará el código permitiendo que interactuemos inmediatamente con él. En su lugar, creará una carpeta llamada pycache dentro de la carpeta donde se almacenan los archivos de nuestro módulo. Este es un lugar donde Python guardará archivos complementarios con extensión .pyc (los archivos .pyc son las versiones en código de bytes de nuestro código fuente).</p>
+<p>En este ejemplo, Python podría crear otro archivo llamado 01_caos.pyc.</p>
+<p>Tener un archivo .pyc disponible hace que la ejecución de un módulo sea más rápida la segunda vez. Sin embargo, puede eliminar los archivos de código de bytes si desea ahorrar espacio en el disco; Python los recreará automáticamente según sea necesario.</p>
+<p>Generalmente no tendrás que hacer la compilación manual de tus módulos de Python, él interprete está programado para saber cuando optimizar un módulo. </p>
+</details>
+<hr />
+<h2 id="17-dentro-de-un-programa-de-python">1.7. Dentro de un programa de Python</h2>
+<p>El resultado del programa <strong>01_caos.py</strong> puede no parecer muy relevante, pero ilustra un fenómeno muy interesante conocido por físicos y matemáticos. Echemos un vistazo a este programa línea por línea y veamos qué hace. No te preocupes por comprender cada detalle de inmediato; Volveremos a todas estas ideas en la próxima sección.</p>
+<p>Las dos primeras líneas del programa comienzan con el carácter <code>#</code>:</p>
+<p><img alt="IMG-28" src="../../assets/28.png" /></p>
+<p>Estas líneas se llaman <strong><em>comentarios</em></strong>. Están destinadas a los lectores humanos del programa y Python las ignora. </p>
+<p><strong>El intérprete de Python siempre omite cualquier texto desde el signo de número (#) hasta el final de una línea.</strong></p>
+<p>La siguiente línea del programa comienza la definición de una función llamada <strong>main</strong>:</p>
+<p><img alt="IMG-29" src="../../assets/29.png" /></p>
+<p>Estrictamente hablando, no sería necesario crear una función <strong>main</strong>. Dado que las líneas de un módulo se ejecutan a medida que se cargan, podríamos haber escrito nuestro programa sin esta definición. Es decir, el módulo podría haber quedado así:</p>
+<p><img alt="IMG-30" src="../../assets/30.png" /></p>
+<p>Esta versión es un poco más corta, pero se acostumbra colocar las instrucciones que componen un programa dentro de una función llamada <strong>main</strong>. </p>
+<p>Un beneficio inmediato de este enfoque se ilustró anteriormente; nos permite ejecutar el programa simplemente invocando <code>main()</code>. No tenemos que reiniciar el shell de Python para ejecutarlo nuevamente, lo cual sería necesario en el caso sin <strong>main</strong>.</p>
+<p>La primera línea dentro de main es realmente el comienzo de nuestro programa.</p>
+<p><img alt="IMG-31" src="../../assets/31.png" /></p>
+<p>Esta línea hace que Python imprima un mensaje presentando el programa cuando se ejecuta.</p>
+<p>Veamos la siguiente línea del programa:</p>
+<p><img alt="IMG-32" src="../../assets/32.png" /></p>
+<p>Aquí <code>x</code> es un ejemplo de una <strong><em>variable</em></strong>. Una variable se utiliza para darle un nombre a un valor para que podamos hacer referencia a él en otros puntos del programa.</p>
+<p>La línea completa es una declaración para obtener información del usuario. Están sucediendo muchas cosas en esta línea y discutiremos los detalles en el próximo capítulo; por ahora, sólo necesitas saber qué logra. </p>
+<p>Cuando Python llega a esta declaración, muestra el mensaje citado <em>"Ingrese un número entre 0 y 1:"</em> y luego hace una pausa, esperando que el usuario escriba algo en el teclado y presione la tecla <code>&lt;ENTER&gt;</code>. </p>
+<p>El valor que escribe el usuario se almacena como la variable x. En el primer ejemplo mostrado arriba, el usuario ingresó . 25, que se convierte en el valor de x.</p>
+<p>La siguiente declaración es un ejemplo de un bucle.</p>
+<p><img alt="IMG-33" src="../../assets/33.png" /></p>
+<p>Un bucle es un mecanismo que le dice a Python que haga lo mismo una y otra vez. Este bucle en particular dice que hagamos algo 10 veces. Las líneas con sangría debajo del encabezado del bucle son declaraciones que se realizan 10 veces. Estos forman el cuerpo del bucle.</p>
+<p><img alt="IMG-34" src="../../assets/34.png" /></p>
+<p>El efecto del bucle es exactamente el mismo que si hubiéramos escrito el cuerpo del bucle 10 veces:</p>
+<p><img alt="IMG-35" src="../../assets/35.png" /></p>
+<p>Obviamente, usar el bucle le ahorra muchos problemas al programador.</p>
+<p>Pero ¿qué hacen exactamente estas declaraciones? </p>
+<p>La primera realiza un cálculo.</p>
+<p><code>x = 3.9 * x * (1 - x)</code></p>
+<p>A esto se le llama <strong>declaración de asignación</strong>. </p>
+<p>La parte del lado derecho del <code>=</code> es una expresión matemática (<code>3.9 * x * (1 - x)</code>). </p>
+<p>Python usa el carácter <code>*</code> para indicar la multiplicación. </p>
+<p>Recuerde que el valor de <code>x</code> es <code>0.25</code> (en la entrada de ejemplo). </p>
+<p>El valor calculado es <code>3.9(0.25)(1 - 0.25)</code>. </p>
+<p>Una vez que se calcula el valor del lado derecho, se guarda (o se asigna) en la variable que aparece en el lado izquierdo del <code>=</code>, en este caso <code>x</code>. El nuevo valor de <code>x</code> (<code>0.73125</code>) reemplaza el valor anterior
+(<code>0.25</code>).</p>
+<p>La segunda línea en el cuerpo del bucle es un tipo de declaración que hemos encontrado antes, una declaración de <code>print()</code>, que imprime el valor de <code>x</code>.</p>
+<p>Cuando Python ejecuta esta declaración, el valor actual de <code>x</code> se muestra en la pantalla. Entonces, el primer número de salida es <code>0.73125</code>.</p>
+<p>Recuerde que el bucle se ejecuta 10 veces. Después de imprimir el valor de <code>x</code>, las dos declaraciones del bucle se ejecutan nuevamente.</p>
+<p>Por supuesto, ahora <code>x</code> tiene el valor <code>0.73125</code>, por lo que la fórmula calcula un nuevo valor de <code>x</code> como <code>3.9(0.73125)(1 - 0.73125)</code>, que es <code>0.76644140625</code>.</p>
+<p>¿Puedes ver cómo se usa el valor actual de x para calcular un nuevo valor cada vez que se realiza el ciclo? </p>
+<p>De ahí provienen los números del ejemplo. Puedes intentar seguir los pasos del programa tu mismo con tu calculadora para un valor de entrada diferente (por ejemplo, 0.5), anota los resultados en un cuaderno y toma el tiempo que tardas en hacer las 10 iteraciones. </p>
+<p>Luego ejecuta el programa usando Python y ve qué tan bien te fue haciéndote pasar por una computadora.</p>
+<hr />
+<h2 id="18-caos-y-computadoras">1.8. Caos y computadoras</h2>
+<p>Anteriormente dije que el programa <strong>01_caos.py</strong> ilustra un fenómeno interesante. ¿Qué podría tener de interesante una pantalla llena de números? Si pruebas el programa por ti mismo, descubrirás que, sin importar con qué número comiences, el programa devuelve 10 números aparentemente aleatorios entre 0 y 1. A medida que se ejecuta el programa, el valor de x parece saltar, sin ningún patrón, es decir caóticamente.</p>
+<p>La función calculada por este programa tiene la forma general: <code>k(x)(1 - x)</code>, donde <code>k</code> en este caso es <code>3. 9</code>. </p>
+<p>Esto se llama función logística. Modela ciertos tipos de circuitos electrónicos inestables y a veces también se utiliza para modelar la variación de la población en condiciones límite. La aplicación repetida de la función logística puede producir caos. Aunque nuestro programa tiene un comportamiento subyacente bien definido, el resultado parece impredecible.</p>
+<p>Una propiedad interesante de las funciones caóticas es que diferencias muy pequeñas en el valor inicial pueden generar grandes diferencias en el resultado cuando la fórmula se aplica repetidamente. Puedes ver esto en nuestro programa, ingresando números que difieren sólo en una pequeña cantidad (una centésima por ejemplo). </p>
+<p>Aquí está el resultado de un programa modificado que muestra los resultados para los valores iniciales de 0.25 y 0.26 uno al lado del otro:</p>
+<p><img alt="IMG-36" src="../../assets/36.png" /></p>
+<p>Con valores iniciales muy similares, los resultados permanecen similares durante algunas iteraciones, pero luego difieren notablemente. Aproximadamente en la quinta iteración, ya no parece haber ninguna relación entre los dos modelos.</p>
+<p>Estas dos características de nuestro programa <strong>01_caos.py</strong>, la aparente imprevisibilidad y la extrema sensibilidad a los valores iniciales, son las características distintivas del comportamiento caótico. </p>
+<p>El caos tiene implicaciones importantes para la informática. Resulta que muchos fenómenos del mundo real que nos gustaría modelar y predecir con nuestras computadoras exhiben precisamente este tipo de comportamiento caótico.</p>
+<p>Seguramente habrás oído hablar del llamado <a href="https://es.wikipedia.org/wiki/Efecto_mariposa">efecto mariposa</a>. Los modelos informáticos que se utilizan para simular y predecir patrones climáticos son tan sensibles que, el efecto de una sola mariposa batiendo sus alas en Nueva Jersey podría marcar la diferencia en si se pronostica lluvia o no en Illinois.</p>
+<p>Es muy posible que incluso con un modelo informático perfecto, nunca podamos medir las condiciones meteorológicas existentes con suficiente precisión como para predecir el tiempo con más de unos pocos días de antelación. Las mediciones simplemente no pueden ser lo suficientemente precisas como para que las predicciones sean precisas en un período de tiempo más largo.</p>
+<p>Como puedes ver, este pequeño programa tiene una valiosa lección para enseñar a los usuarios de computadoras. </p>
+<p><strong><em>Por más sorprendentes que sean las computadoras, los resultados que nos brindan son tan útiles como los modelos matemáticos en los que se basan los programas.</em></strong> </p>
+<p>Las computadoras pueden dar resultados incorrectos debido a errores en los programas, pero incluso los programas correctos pueden producir resultados erróneos si los modelos son incorrectos o las entradas iniciales no son lo suficientemente precisas.</p>
+<hr />
+<h2 id="19-resumen-de-la-seccion">1.9. Resumen de la sección</h2>
+<p>En esta sección se han introducido los siguientes conceptos las computadoras, la informática y la programación.
+A continuación se muestra un resumen de algunos de los conceptos clave:</p>
+<ul>
+<li>
+<p>Una computadora es una máquina universal de procesamiento de información. Puede llevar a cabo cualquier proceso que pueda describirse con suficiente detalle. Una descripción de la secuencia de pasos para resolver un problema particular se llama algoritmo. Los algoritmos se pueden convertir en software (programas) que determina lo que el hardware (máquina física) puede lograr. El proceso de creación de software se llama programación.</p>
+</li>
+<li>
+<p>La informática es el estudio de la información que se puede procesar automáticamente. Los informáticos utilizan las técnicas de diseño, análisis y experimentación. La informática es la base áreas como redes, bases de datos y sistemas de gestión de la información, por nombrar algunas.</p>
+</li>
+<li>
+<p>Una vista funcional básica de un sistema informático comprende una unidad central de procesamiento (CPU), memoria principal, memoria secundaria y dispositivos de entrada y salida. La CPU es el cerebro de la computadora que realiza operaciones aritméticas y lógicas simples. La información sobre la que actúa la CPU (datos y programas) se almacena en la memoria principal (RAM). La información más permanente se almacena en dispositivos de memoria secundaria, como discos magnéticos, memoria flash y dispositivos ópticos. La información se ingresa en la computadora a través de dispositivos de entrada y los dispositivos de salida muestran los resultados.</p>
+</li>
+<li>
+<p>Los programas se escriben utilizando una notación formal conocida como lenguaje de programación. Hay muchos lenguajes diferentes, pero todos comparten la propiedad de tener una sintaxis (forma) y una semántica (significado) precisas. El hardware de la computadora entiende sólo un lenguaje de muy bajo nivel conocido como lenguaje de máquina. Los programas generalmente se escriben utilizando lenguajes de alto nivel orientados a humanos, como Python. Un lenguaje de alto nivel debe compilarse o interpretarse para que la computadora lo comprenda. Los lenguajes de alto nivel son más portátiles que el lenguaje de máquina.</p>
+</li>
+<li>
+<p>Python es un lenguaje interpretado. Una buena forma de aprender sobre Python es utilizar un shell interactivo para experimentar. La distribución estándar de Python incluye un programa llamado IDLE que proporciona un shell y funciones para editar programas de Python.</p>
+</li>
+<li>
+<p>Un programa Python es una secuencia de comandos (llamados declaraciones) que debe ejecutar el intérprete de Python. Python incluye declaraciones para hacer cosas como imprimir resultados en la pantalla, obtener información del usuario, calcular el valor de una expresión matemática y realizar una secuencia de declaraciones varias veces (bucle).</p>
+</li>
+<li>
+<p>Un modelo matemático se llama caótico si cambios muy pequeños en la entrada conducen a grandes cambios en los resultados, haciéndolos parecer aleatorios o impredecibles. Los modelos de muchos fenómenos del mundo real exhiben un comportamiento caótico, lo que impone algunos límites al poder de la computación.</p>
+</li>
+</ul>
+<hr />
+<h2 id="110-ejercicios">1.10. Ejercicios</h2>
+<details class="question">
+<summary>Verdadero o falso</summary>
+<ol>
+<li>La informática es el estudio de las computadoras.</li>
+<li>El CPU es el "cerebro" de la computadora.</li>
+<li>La memoria secundaria se llama RAM.</li>
+<li>Toda la información en la que está trabajando una computadora actualmente se almacena en la memoria principal.</li>
+<li>La sintaxis de un lenguaje es su significado y la semántica es su forma.</li>
+<li>Una definición de función es una secuencia de declaraciones que define un nuevo comando.</li>
+<li>Un entorno de programación se refiere a una oficina donde trabajan los programadores.</li>
+<li>Una variable se utiliza para dar un nombre a un valor para que se pueda hacer referencia a él en otros lugares.</li>
+<li>Se utiliza un bucle para saltar una sección de un programa.</li>
+<li>Una función caótica no puede ser calculada por una computadora.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Un algoritmo es como</summary>
+<p>a) un periódico </p>
+<p>b) un manifiesto </p>
+<p>c) un tambor </p>
+<p>d) una receta</p>
+</details>
+<details class="question">
+<summary>¿Cuál es la cuestión fundamental de la informática?</summary>
+<p>a) ¿A qué velocidad puede calcular una computadora?</p>
+<p>b) ¿Qué información que se puede procesar automáticamente (computar)?</p>
+<p>c) ¿Cuál es el lenguaje de programación más eficaz?</p>
+<p>d) ¿Cuánto dinero puede ganar un programador?</p>
+</details>
+<details class="question">
+<summary>Un problema es intratable cuando</summary>
+<p>a) no se puede revertir su solución</p>
+<p>b) involucra transistores</p>
+<p>c) tiene muchas soluciones</p>
+<p>d) no es práctico resolver</p>
+</details>
+<details class="question">
+<summary>¿Cuál de los siguientes no es un ejemplo de memoria secundaria?</summary>
+<p>a) RAM </p>
+<p>b) disco duro </p>
+<p>c) unidad flash USB </p>
+<p>d) DVD</p>
+</details>
+<details class="question">
+<summary>Los lenguajes informáticos diseñados para ser utilizados y comprendidos por humanos son</summary>
+<p>a) lenguajes naturales</p>
+<p>b) lenguajes informáticos de alto nivel</p>
+<p>c) lenguajes de máquina</p>
+<p>d) lenguajes de búsqueda y ejecución</p>
+</details>
+<details class="question">
+<summary>Una declaración es</summary>
+<p>a) una traducción del lenguaje de máquina</p>
+<p>b) un comando completo de computadora </p>
+<p>c) una descripción precisa de un problema </p>
+<p>d) una sección de un algoritmo</p>
+</details>
+<details class="question">
+<summary>Una diferencia entre un compilador y un intérprete es</summary>
+<p>a) un compilador es un programa</p>
+<p>b) un compilador se usa para traducir lenguaje de alto nivel a lenguaje de máquina </p>
+<p>c) un compilador ya no se necesita después de traducir un programa</p>
+<p>d) un compilador procesa el código fuente</p>
+</details>
+<details class="question">
+<summary>Por convención, las declaraciones de un programa a menudo se colocan en una función llamada</summary>
+<p>a) import </p>
+<p>b) main </p>
+<p>c) program </p>
+<p>d) IDLE</p>
+</details>
+<details class="question">
+<summary>¿Cuál de las siguientes afirmaciones no es cierta respecto de los comentarios?</summary>
+<p>a) Hacen que un programa sea más eficiente.</p>
+<p>b) Están destinados a lectores humanos.</p>
+<p>c) Python los ignora.</p>
+<p>d) En Python, comienzan con el signo de almohadilla (#).</p>
+</details>
+<details class="question">
+<summary>Los elementos enumerados entre paréntesis de la definición de una función se denominan</summary>
+<p>a) paréntesis</p>
+<p>b) parámetros</p>
+<p>c) argumentos</p>
+<p>d) tanto <strong>b</strong> como <strong>c</strong> son correctos</p>
+</details>
+<details class="example">
+<summary>Sesión interactiva</summary>
+<p>Inicie una sesión interactiva de Python e intente escribir cada uno de los siguientes comandos. Anota los resultados que veas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">2.0</span> <span class="o">+</span> <span class="mf">3.0</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span> <span class="o">+</span> <span class="s2">&quot;3&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2+ 3=&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="o">//</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>Ejecución de programas de Python</summary>
+<p>Ingresa y ejecute el programa <strong>01_caos.py</strong> de la Sección 1.6. Pruébelo con varios valores de entrada para ver que funciona como se describe en el capítulo.</p>
+</details>
+<details class="example">
+<summary>Edición de programas de Python</summary>
+<p>Modifica el programa <strong>01_caos.py</strong> usando 2.0 en lugar de 3.9 como multiplicador en la función logística. Su línea de código modificada debería verse así:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>Edición de programas de Python</summary>
+<p>Modifica el programa <strong>01_caos.py</strong> para que imprima 20 valores en lugar de 10.</p>
+</details>
+<details class="example">
+<summary>Edición de programas de Python</summary>
+<p>Modifica el programa <strong>01_caos.py</strong> para que el usuario determine el número de valores a imprimir.</p>
+</details>
+<details class="tip">
+<summary>Solo leeme en caso de que necesites ayuda con el ejercicio anterior</summary>
+<p>Tendrás que agregar una línea cerca de la parte superior del programa para obtener otro valor del usuario</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;¿Cuántos números debo imprimir? &quot;</span><span class="p">))</span>
+</code></pre></div>
+Luego necesitarás cambiar el bucle para usar <code>n</code> en lugar de un número específico.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/FVCW5mBQVs" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LPUMOGO22" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/mora-gómez-luis-enrique-5a7411221/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
