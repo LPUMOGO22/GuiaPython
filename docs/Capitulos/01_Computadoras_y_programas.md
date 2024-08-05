@@ -96,7 +96,7 @@ Para decirlo de otra manera, la cuestión fundamental de la informática es simp
 
 Una manera de demostrar que un problema particular puede resolverse es **diseñar** realmente una solución. Es decir, desarrollamos un proceso paso a paso para lograr el resultado deseado. Los informáticos llaman a esto algoritmo. Es una palabra elegante que básicamente significa "receta". El diseño de algoritmos es una de las facetas más importantes de la informática. En esta guía encontrarás técnicas para diseñar e implementar algoritmos.
 
-??? tip "Definición de algoritmo"
+??? note "Definición de algoritmo"
     En matemáticas, lógica, ciencias de la computación y disciplinas relacionadas, un algoritmo es un conjunto de instrucciones o reglas definidas, no-ambiguas, ordenadas y finitas que permite, típicamente, solucionar un problema.
 
 Una debilidad del diseño es que sólo puede responder a la pregunta "¿Qué es automatizable?". Si puedo idear un algoritmo, entonces el problema tiene solución. Sin embargo, no encontrar un algoritmo no significa que el problema no tenga solución. Puede significar que simplemente no soy lo suficientemente inteligente o que aún no se me ha ocurrido la idea correcta. Aquí es donde entra el **análisis**.
@@ -372,6 +372,8 @@ Damos click en él e inmediatamente por debajo se habilitará un recuadro que no
 
 En la parte derecha del editor encontraremos nuestro archivo *01_caos.py* listo para ser editado, ahí pegamos el siguiente código.
 
+![IMG-21](../assets/21.png)
+
 ```python
 # caos.py
 # Un programa que ilustra una conducta caótica
@@ -386,32 +388,423 @@ def main():
 main()
 ```
 
-Una vez que lo hayas escrito, guarda el script. 
+Una vez que lo hayas escrito, notarás que el ícono del explorador tiene una alerta azul con un número 1, esto indica que dentro de nuestro entorno de trabajo existe un archivo que se ha editado, pero no se han guardado los cambios. 
 
-La extensión `.py` indica que se trata de un módulo de Python. Ten cuidado donde guardas tus programas. Asegúrate de navegar hasta una carpeta que tengas bien ubicada. 
+![IMG-22](../assets/22.png)
+
+Para guardar el script usamos la combinación de teclas `<Ctrl+S>` en Windows y `<Command+S>` en Mac.
+
+Tú editor se debería ver de la siguiente manera, sin alertas a la izquierda y con el código completo a la derecha.
+
+![IMG-23](../assets/23.png)
 
 
-En este punto, es posible que estés intentando encontrarle sentido a lo que acabas de copiar. Puedes ver que este ejemplo en particular contiene líneas para definir una nueva función llamada "*main*". (Los programas suelen colocarse en una función llamada *main*). La última línea del archivo es el comando para invocar esta función. No te preocupes si no comprendes qué hace realmente main; lo discutiremos en la siguiente sección. El punto aquí es que una vez que tenemos un programa guardado en un archivo de módulo como este, podemos ejecutarlo cuando queramos.
+En este punto, es posible que estés intentando encontrarle sentido a lo que acabas de copiar. Puedes ver que este ejemplo en particular contiene líneas para definir una nueva función llamada "*main*". (Los programas suelen colocarse en una función llamada *main*). 
 
-Nuestro programa se puede ejecutar de varias maneras diferentes que dependen del sistema operativo real y del entorno de programación que estés utilizando. Si estás utilizando un sistema de ventanas, probablemente puedas ejecutar un programa Python haciendo clic (o haciendo doble clic) en el icono del archivo del módulo. En una situación de línea de comando, puedes escribir un comando como:
+La última línea del archivo (línea 11) es el comando para invocar esta función. No te preocupes si no comprendes qué hace realmente main; lo discutiremos en la siguiente sección. El punto aquí es que una vez que tenemos un programa guardado en un archivo de módulo como este, podemos ejecutarlo cuando queramos.
 
- ```python
+Nuestro programa se puede ejecutar de varias maneras diferentes que dependen del sistema operativo real y del entorno de programación que estés utilizando.
+
+Nosotros lo ejecutaremos desde nuestra shell, para ello debemos retomar nuestra shell desde la que creamos la carpeta y abrimos el VSCode.
+
+Si estamos en **Windows** nuestra shell debe verse así.
+
+![IMG-16](../assets/16.png)
+
+Si estamos en **Mac** nuestra shell debe verse así.
+
+![IMG-24](../assets/24.png)
+
+El comando que nos ejecutar nuestro programa en **Windows** es:
+
+ ```BASH
+ python 01_caos.py
+ ```
+
+![IMG-25](../assets/25.png)
+
+El comando que nos ejecutar nuestro programa en **Mac** es:
+
+ ```BASH
  python3 01_caos.py
  ```
 
 
+![IMG-26](../assets/26.png)
 
+
+El programa en ejecución le pide al usuario que ingrese un número entre 0 y 1 yo escribiré ".25".
+
+![IMG-27](../assets/27.png)
+
+Lo que ocurrió aquí es que le indicamos a la computadora que ejecutará la serie de instrucciones que definimos en el programa **01_caos.py** con Python, Python interpreta el módulo (programa) de arriba a abajo, línea por línea. Es como si los hubiéramos escrito uno por uno en el indicador interactivo de Python. 
+
+La definición en el módulo hace que Python cree la función principal (líneas 4 a 9). La última línea (línea 11) de este módulo hace que Python invoque la función principal, ejecutando así nuestro programa. 
+
+El programa ya en ejecución le pide al usuario que ingrese un número entre 0 y 1 y luego imprime una serie de 10 números.
+
+??? note "Compilación/interpretación en Python"
+
+    Python es un lenguaje interpretado, pero cuenta con un proceso híbrido de compilación/interpretación.
+
+    Si ejecutamos el código fuente mediante el comando:
+
+    ```BASH
+    python 01_caos.py
+    ```
+
+    Solamente estamos interpretando. Sin embargo, es posible que el código fuente de Python en el archivo del módulo (01_caos.py) se compile en instrucciones más primitivas llamadas **código de bytes**.
+
+    ¿Por qué haríamos eso?
+
+    Porque tener un archivo en código de bytes hace que la ejecución sea más rápida la segunda vez. Si el código de un módulo se va a emplear en repetidas ocasiones, vale la pena que exista en código de bytes.
+
+    Para que Python compile nuestro módulo, empleamos el comando:
+
+    ```BASH
+    python -m py_compile 01_caos.py
+    ```
+    Este comando no interpretará el código permitiendo que interactuemos inmediatamente con él. En su lugar, creará una carpeta llamada pycache dentro de la carpeta donde se almacenan los archivos de nuestro módulo. Este es un lugar donde Python guardará archivos complementarios con extensión .pyc (los archivos .pyc son las versiones en código de bytes de nuestro código fuente).
+
+    En este ejemplo, Python podría crear otro archivo llamado 01_caos.pyc.
+
+    Tener un archivo .pyc disponible hace que la ejecución de un módulo sea más rápida la segunda vez. Sin embargo, puede eliminar los archivos de código de bytes si desea ahorrar espacio en el disco; Python los recreará automáticamente según sea necesario.
+
+    Generalmente no tendrás que hacer la compilación manual de tus módulos de Python, él interprete está programado para saber cuando optimizar un módulo. 
 
 ***
 
 ## 1.7. Dentro de un programa de Python
 
+El resultado del programa **01_caos.py** puede no parecer muy relevante, pero ilustra un fenómeno muy interesante conocido por físicos y matemáticos. Echemos un vistazo a este programa línea por línea y veamos qué hace. No te preocupes por comprender cada detalle de inmediato; Volveremos a todas estas ideas en la próxima sección.
+
+Las dos primeras líneas del programa comienzan con el carácter `#`:
+
+![IMG-28](../assets/28.png)
+
+Estas líneas se llaman ***comentarios***. Están destinadas a los lectores humanos del programa y Python las ignora. 
+
+**El intérprete de Python siempre omite cualquier texto desde el signo de número (#) hasta el final de una línea.**
+
+La siguiente línea del programa comienza la definición de una función llamada **main**:
+
+![IMG-29](../assets/29.png)
+
+Estrictamente hablando, no sería necesario crear una función **main**. Dado que las líneas de un módulo se ejecutan a medida que se cargan, podríamos haber escrito nuestro programa sin esta definición. Es decir, el módulo podría haber quedado así:
+
+![IMG-30](../assets/30.png)
+
+Esta versión es un poco más corta, pero se acostumbra colocar las instrucciones que componen un programa dentro de una función llamada **main**. 
+
+Un beneficio inmediato de este enfoque se ilustró anteriormente; nos permite ejecutar el programa simplemente invocando `main()`. No tenemos que reiniciar el shell de Python para ejecutarlo nuevamente, lo cual sería necesario en el caso sin **main**.
+
+La primera línea dentro de main es realmente el comienzo de nuestro programa.
+
+![IMG-31](../assets/31.png)
+
+Esta línea hace que Python imprima un mensaje presentando el programa cuando se ejecuta.
+
+Veamos la siguiente línea del programa:
+
+![IMG-32](../assets/32.png)
+
+Aquí `x` es un ejemplo de una ***variable***. Una variable se utiliza para darle un nombre a un valor para que podamos hacer referencia a él en otros puntos del programa.
+
+La línea completa es una declaración para obtener información del usuario. Están sucediendo muchas cosas en esta línea y discutiremos los detalles en el próximo capítulo; por ahora, sólo necesitas saber qué logra. 
+
+Cuando Python llega a esta declaración, muestra el mensaje citado *"Ingrese un número entre 0 y 1:"* y luego hace una pausa, esperando que el usuario escriba algo en el teclado y presione la tecla `<ENTER>`. 
+
+El valor que escribe el usuario se almacena como la variable x. En el primer ejemplo mostrado arriba, el usuario ingresó . 25, que se convierte en el valor de x.
+
+La siguiente declaración es un ejemplo de un bucle.
+
+![IMG-33](../assets/33.png)
+
+Un bucle es un mecanismo que le dice a Python que haga lo mismo una y otra vez. Este bucle en particular dice que hagamos algo 10 veces. Las líneas con sangría debajo del encabezado del bucle son declaraciones que se realizan 10 veces. Estos forman el cuerpo del bucle.
+
+![IMG-34](../assets/34.png)
+
+El efecto del bucle es exactamente el mismo que si hubiéramos escrito el cuerpo del bucle 10 veces:
+
+![IMG-35](../assets/35.png)
+
+Obviamente, usar el bucle le ahorra muchos problemas al programador.
+
+Pero ¿qué hacen exactamente estas declaraciones? 
+
+La primera realiza un cálculo.
+
+`x = 3.9 * x * (1 - x)`
+
+A esto se le llama **declaración de asignación**. 
+
+La parte del lado derecho del `=` es una expresión matemática (`3.9 * x * (1 - x)`). 
+
+Python usa el carácter `*` para indicar la multiplicación. 
+
+Recuerde que el valor de `x` es `0.25` (en la entrada de ejemplo). 
+
+El valor calculado es `3.9(0.25)(1 - 0.25)`. 
+
+Una vez que se calcula el valor del lado derecho, se guarda (o se asigna) en la variable que aparece en el lado izquierdo del `=`, en este caso `x`. El nuevo valor de `x` (`0.73125`) reemplaza el valor anterior
+(`0.25`).
+
+La segunda línea en el cuerpo del bucle es un tipo de declaración que hemos encontrado antes, una declaración de `print()`, que imprime el valor de `x`.
+
+Cuando Python ejecuta esta declaración, el valor actual de `x` se muestra en la pantalla. Entonces, el primer número de salida es `0.73125`.
+
+Recuerde que el bucle se ejecuta 10 veces. Después de imprimir el valor de `x`, las dos declaraciones del bucle se ejecutan nuevamente.
+
+Por supuesto, ahora `x` tiene el valor `0.73125`, por lo que la fórmula calcula un nuevo valor de `x` como `3.9(0.73125)(1 - 0.73125)`, que es `0.76644140625`.
+
+¿Puedes ver cómo se usa el valor actual de x para calcular un nuevo valor cada vez que se realiza el ciclo? 
+
+De ahí provienen los números del ejemplo. Puedes intentar seguir los pasos del programa tu mismo con tu calculadora para un valor de entrada diferente (por ejemplo, 0.5), anota los resultados en un cuaderno y toma el tiempo que tardas en hacer las 10 iteraciones. 
+
+Luego ejecuta el programa usando Python y ve qué tan bien te fue haciéndote pasar por una computadora.
+
 ***
 
-## 1.8. Caos y computadoras 
+## 1.8. Caos y computadoras
+
+Anteriormente dije que el programa **01_caos.py** ilustra un fenómeno interesante. ¿Qué podría tener de interesante una pantalla llena de números? Si pruebas el programa por ti mismo, descubrirás que, sin importar con qué número comiences, el programa devuelve 10 números aparentemente aleatorios entre 0 y 1. A medida que se ejecuta el programa, el valor de x parece saltar, sin ningún patrón, es decir caóticamente.
+
+La función calculada por este programa tiene la forma general: `k(x)(1 - x)`, donde `k` en este caso es `3. 9`. 
+
+Esto se llama función logística. Modela ciertos tipos de circuitos electrónicos inestables y a veces también se utiliza para modelar la variación de la población en condiciones límite. La aplicación repetida de la función logística puede producir caos. Aunque nuestro programa tiene un comportamiento subyacente bien definido, el resultado parece impredecible.
+
+Una propiedad interesante de las funciones caóticas es que diferencias muy pequeñas en el valor inicial pueden generar grandes diferencias en el resultado cuando la fórmula se aplica repetidamente. Puedes ver esto en nuestro programa, ingresando números que difieren sólo en una pequeña cantidad (una centésima por ejemplo). 
+
+Aquí está el resultado de un programa modificado que muestra los resultados para los valores iniciales de 0.25 y 0.26 uno al lado del otro:
+
+![IMG-36](../assets/36.png)
+
+Con valores iniciales muy similares, los resultados permanecen similares durante algunas iteraciones, pero luego difieren notablemente. Aproximadamente en la quinta iteración, ya no parece haber ninguna relación entre los dos modelos.
+
+Estas dos características de nuestro programa **01_caos.py**, la aparente imprevisibilidad y la extrema sensibilidad a los valores iniciales, son las características distintivas del comportamiento caótico. 
+
+El caos tiene implicaciones importantes para la informática. Resulta que muchos fenómenos del mundo real que nos gustaría modelar y predecir con nuestras computadoras exhiben precisamente este tipo de comportamiento caótico.
+
+Seguramente habrás oído hablar del llamado [efecto mariposa](https://es.wikipedia.org/wiki/Efecto_mariposa). Los modelos informáticos que se utilizan para simular y predecir patrones climáticos son tan sensibles que, el efecto de una sola mariposa batiendo sus alas en Nueva Jersey podría marcar la diferencia en si se pronostica lluvia o no en Illinois.
+
+Es muy posible que incluso con un modelo informático perfecto, nunca podamos medir las condiciones meteorológicas existentes con suficiente precisión como para predecir el tiempo con más de unos pocos días de antelación. Las mediciones simplemente no pueden ser lo suficientemente precisas como para que las predicciones sean precisas en un período de tiempo más largo.
+
+Como puedes ver, este pequeño programa tiene una valiosa lección para enseñar a los usuarios de computadoras. 
+
+***Por más sorprendentes que sean las computadoras, los resultados que nos brindan son tan útiles como los modelos matemáticos en los que se basan los programas.*** 
+
+Las computadoras pueden dar resultados incorrectos debido a errores en los programas, pero incluso los programas correctos pueden producir resultados erróneos si los modelos son incorrectos o las entradas iniciales no son lo suficientemente precisas.
 
 ***
 
-## 1.9. Resumen del capítulo
+## 1.9. Resumen de la sección
+
+En esta sección se han introducido los siguientes conceptos las computadoras, la informática y la programación.
+A continuación se muestra un resumen de algunos de los conceptos clave:
+
+- Una computadora es una máquina universal de procesamiento de información. Puede llevar a cabo cualquier proceso que pueda describirse con suficiente detalle. Una descripción de la secuencia de pasos para resolver un problema particular se llama algoritmo. Los algoritmos se pueden convertir en software (programas) que determina lo que el hardware (máquina física) puede lograr. El proceso de creación de software se llama programación.
+
+- La informática es el estudio de la información que se puede procesar automáticamente. Los informáticos utilizan las técnicas de diseño, análisis y experimentación. La informática es la base áreas como redes, bases de datos y sistemas de gestión de la información, por nombrar algunas.
+
+- Una vista funcional básica de un sistema informático comprende una unidad central de procesamiento (CPU), memoria principal, memoria secundaria y dispositivos de entrada y salida. La CPU es el cerebro de la computadora que realiza operaciones aritméticas y lógicas simples. La información sobre la que actúa la CPU (datos y programas) se almacena en la memoria principal (RAM). La información más permanente se almacena en dispositivos de memoria secundaria, como discos magnéticos, memoria flash y dispositivos ópticos. La información se ingresa en la computadora a través de dispositivos de entrada y los dispositivos de salida muestran los resultados.
+
+- Los programas se escriben utilizando una notación formal conocida como lenguaje de programación. Hay muchos lenguajes diferentes, pero todos comparten la propiedad de tener una sintaxis (forma) y una semántica (significado) precisas. El hardware de la computadora entiende sólo un lenguaje de muy bajo nivel conocido como lenguaje de máquina. Los programas generalmente se escriben utilizando lenguajes de alto nivel orientados a humanos, como Python. Un lenguaje de alto nivel debe compilarse o interpretarse para que la computadora lo comprenda. Los lenguajes de alto nivel son más portátiles que el lenguaje de máquina.
+
+
+- Python es un lenguaje interpretado. Una buena forma de aprender sobre Python es utilizar un shell interactivo para experimentar. La distribución estándar de Python incluye un programa llamado IDLE que proporciona un shell y funciones para editar programas de Python.
+
+- Un programa Python es una secuencia de comandos (llamados declaraciones) que debe ejecutar el intérprete de Python. Python incluye declaraciones para hacer cosas como imprimir resultados en la pantalla, obtener información del usuario, calcular el valor de una expresión matemática y realizar una secuencia de declaraciones varias veces (bucle).
+
+- Un modelo matemático se llama caótico si cambios muy pequeños en la entrada conducen a grandes cambios en los resultados, haciéndolos parecer aleatorios o impredecibles. Los modelos de muchos fenómenos del mundo real exhiben un comportamiento caótico, lo que impone algunos límites al poder de la computación.
 
 ***
+
+## 1.10. Ejercicios
+
+??? question "Verdadero o falso"
+    1. La informática es el estudio de las computadoras.
+    2. El CPU es el "cerebro" de la computadora.
+    3. La memoria secundaria se llama RAM.
+    4. Toda la información en la que está trabajando una computadora actualmente se almacena en la memoria principal.
+    5. La sintaxis de un lenguaje es su significado y la semántica es su forma.
+    6. Una definición de función es una secuencia de declaraciones que define un nuevo comando.
+    7. Un entorno de programación se refiere a una oficina donde trabajan los programadores.
+    8. Una variable se utiliza para dar un nombre a un valor para que se pueda hacer referencia a él en otros lugares.
+    9. Se utiliza un bucle para saltar una sección de un programa.
+    10. Una función caótica no puede ser calculada por una computadora.
+
+??? question "Un algoritmo es como" 
+
+    a) un periódico 
+    
+    b) un manifiesto 
+    
+    c) un tambor 
+    
+    d) una receta
+
+??? question "¿Cuál es la cuestión fundamental de la informática?" 
+
+    a) ¿A qué velocidad puede calcular una computadora?
+
+    b) ¿Qué información que se puede procesar automáticamente (computar)?
+
+    c) ¿Cuál es el lenguaje de programación más eficaz?
+    
+    d) ¿Cuánto dinero puede ganar un programador?
+
+??? question "Un problema es intratable cuando" 
+
+    a) no se puede revertir su solución
+
+    b) involucra transistores
+
+    c) tiene muchas soluciones
+
+    d) no es práctico resolver
+
+??? question "¿Cuál de los siguientes no es un ejemplo de memoria secundaria?" 
+
+    a) RAM 
+    
+    b) disco duro 
+    
+    c) unidad flash USB 
+    
+    d) DVD
+
+??? question "Los lenguajes informáticos diseñados para ser utilizados y comprendidos por humanos son" 
+
+    a) lenguajes naturales
+    
+    b) lenguajes informáticos de alto nivel
+    
+    c) lenguajes de máquina
+    
+    d) lenguajes de búsqueda y ejecución
+
+??? question "Una declaración es" 
+
+    a) una traducción del lenguaje de máquina
+
+    b) un comando completo de computadora 
+    
+    c) una descripción precisa de un problema 
+    
+    d) una sección de un algoritmo
+
+??? question "Una diferencia entre un compilador y un intérprete es" 
+
+    a) un compilador es un programa
+    
+    b) un compilador se usa para traducir lenguaje de alto nivel a lenguaje de máquina 
+    
+    c) un compilador ya no se necesita después de traducir un programa
+    
+    d) un compilador procesa el código fuente
+
+??? question "Por convención, las declaraciones de un programa a menudo se colocan en una función llamada" 
+
+    a) import 
+    
+    b) main 
+    
+    c) program 
+    
+    d) IDLE
+
+??? question "¿Cuál de las siguientes afirmaciones no es cierta respecto de los comentarios?" 
+
+    a) Hacen que un programa sea más eficiente.
+    
+    b) Están destinados a lectores humanos.
+    
+    c) Python los ignora.
+    
+    d) En Python, comienzan con el signo de almohadilla (#).
+
+??? question "Los elementos enumerados entre paréntesis de la definición de una función se denominan" 
+
+    a) paréntesis
+
+    b) parámetros
+    
+    c) argumentos
+    
+    d) tanto **b** como **c** son correctos
+
+??? example "Sesión interactiva"
+    Inicie una sesión interactiva de Python e intente escribir cada uno de los siguientes comandos. Anota los resultados que veas.
+
+    ```python
+    print("Hello, world!")
+    ```
+
+    ```python
+    print("Hello", "world!")
+    ```
+
+    ```python
+    print(3)
+    ```
+
+    ```python
+    print(3.0)
+    ```
+
+    ```python
+    print(2 + 3)
+    ```
+
+    ```python
+    print(2.0 + 3.0)
+    ```
+
+    ```python
+    print("2" + "3")
+    ```
+
+    ```python
+    print("2+ 3=", 2+ 3)
+    ```
+
+    ```python
+    print(2 * 3)
+    ```
+
+    ```python
+    print(2 ** 3)
+    ```
+
+    ```python
+    print(7 / 3)
+    ```
+
+    ```python
+    print(7 // 3)
+    ```
+
+??? example "Ejecución de programas de Python"
+    Ingresa y ejecute el programa **01_caos.py** de la Sección 1.6. Pruébelo con varios valores de entrada para ver que funciona como se describe en el capítulo.
+
+??? example "Edición de programas de Python"
+    Modifica el programa **01_caos.py** usando 2.0 en lugar de 3.9 como multiplicador en la función logística. Su línea de código modificada debería verse así:
+
+    ```python
+    x = 2.0 * x * (1 - x)
+    ```
+
+??? example "Edición de programas de Python"
+    Modifica el programa **01_caos.py** para que imprima 20 valores en lugar de 10.
+
+??? example "Edición de programas de Python"
+    Modifica el programa **01_caos.py** para que el usuario determine el número de valores a imprimir.
+
+??? tip "Solo leeme en caso de que necesites ayuda con el ejercicio anterior"
+    Tendrás que agregar una línea cerca de la parte superior del programa para obtener otro valor del usuario
+
+    ```python
+    n = eval(input("¿Cuántos números debo imprimir? "))
+    ```
+    Luego necesitarás cambiar el bucle para usar `n` en lugar de un número específico.
+
