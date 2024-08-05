@@ -223,6 +223,185 @@ Un programa para el procesador Intel i7 de tu laptop no funcionará directamente
 
 ## 1.6. La mágia de Python
 
+Ahora que tienes todos los detalles técnicos, es hora de empezar a divertirte con Python. El objetivo final es hacer que la computadora cumpla nuestras órdenes. Para ello, escribiremos programas que controlen los procesos computacionales dentro de la máquina. Ya has visto que no hay magia en este proceso, pero en cierto modo la programación parece mágica.
+Los procesos computacionales dentro de la computadora son como espíritus mágicos que podemos aprovechar para nuestro trabajo. 
+
+Desafortunadamente, esos espíritus sólo entienden un lenguaje muy arcano que nosotros desconocemos. Lo que necesitamos es un genio amigable que pueda dirigir a los espíritus para que cumplan nuestros deseos. Nuestro genio es un intérprete de Python. Podemos dar instrucciones al intérprete de Python y él dirige los espíritus subyacentes para llevar a cabo nuestras demandas. 
+
+Nos comunicamos con el genio a través de un lenguaje especial de hechizos y encantamientos (es decir, Python). La mejor manera de empezar a aprender sobre Python es dejar salir a nuestro genio de la botella y probar algunos hechizos.
+
+Con la mayoría de las instalaciones de Python, puede iniciar un intérprete de Python en un modo interactivo llamado shell. Un shell le permite escribir comandos de Python y luego muestra el resultado de ejecutarlos. Los detalles para iniciar un shell difieren según las distintas instalaciones. Si está utilizando la distribución estándar de Python para PC o Mac de [www.python.org](https://www.python.org/), debes tener una aplicación llamada IDLE (Integrated Development and Learning Environment) que te permitirá interactuar con Python 
+
+Si aún no tienes Python instalado, lee nuestra [guía de instalación](../Guías/01_Instalación_Python.md).
+
+Comencemos abriendo la aplicación IDLE.
+
+![IMG-01](../assets/01.png)
+
+Cuando inicies IDLE (u otro shell de Python) por primera vez, deberías ver algo como esto:
+
+![IMG-02](../assets/02.png)
+
+El mensaje de apertura exacto depende de la versión de Python que estés ejecutando y del sistema en el que estés trabajando. La parte importante es la última línea; el  `>>>` es un mensaje de Python que indica que nuestro genio (el intérprete de Python) está esperando que le demos una orden. En los lenguajes de programación, un comando completo se llama declaración.
+
+Aquí hay un ejemplo de interacción con un shell de Python:
+
+![IMG-03](../assets/03.png)
+
+Aquí he probado tres ejemplos utilizando la declaración de impresión (`print`) de Python. 
+
+- La primera declaración le pide a Python que muestre la frase literal *"Hola mundo!"*. Python responde en la siguiente línea imprimiendo la frase. 
+
+- La segunda declaración de impresión le pide a Python que imprima la suma de *2 y 3*. 
+
+- La tercera impresión combina estas dos ideas. Python imprime la parte entre comillas, "*2 + 3 =*", seguida del resultado de sumar 2 + 3, que es *5*.
+
+Este tipo de interacción de shell es una excelente manera de probar cosas nuevas en Python. A lo largo de esta guía se encuentran fragmentos de sesiones interactivas. Cuando veas el mensaje de Python `>>>` en un ejemplo, debería indicarte que se está ilustrando una sesión interactiva. Es una buena idea iniciar su propio shell de Python y probar los ejemplos.
+
+Por lo general, queremos ir más allá de los fragmentos de una línea y ejecutar una secuencia completa de declaraciones. Python nos permite juntar una secuencia de declaraciones para crear un comando o función completamente nueva. A continuación se muestra un ejemplo de cómo crear una nueva función llamada "**hola**":
+
+![IMG-04](../assets/04.png)
+
+La primera línea le dice a Python que estamos definiendo una nueva función y la llamaremos **hola**. Las siguientes líneas tienen sangría para mostrar que son parte de la función **hola**. 
+
+!!! note "Nota"
+    Algunos shells imprimirán puntos suspensivos ["`...`"] al principio de las líneas con sangría.
+
+La línea en blanco al final (que se obtiene presionando la tecla `<ENTER>` dos veces) le permite a Python saber que la definición ha finalizado y el shell responde con `>>>` para que continuemos interactuando. Ten en cuenta que escribir la definición no hizo que Python imprimiera nada todavía. Le hemos dicho a Python lo que debería suceder cuando la función **hola** se usa como comando; En realidad, todavía no le hemos pedido a Python que lo realice.
+
+
+Una función se invoca (o llama) escribiendo su nombre seguido de paréntesis. Esto es lo que sucede cuando usamos nuestro comando **hola**:
+
+![IMG-05](../assets/05.png)
+
+¿Ves lo que esto hace? Las dos declaraciones de impresión de la definición de la función **hola** se ejecutan en secuencia.
+
+Quizás te preguntes acerca de los paréntesis en la definición y el uso de **hola**. Los comandos pueden tener partes *variables* llamadas parámetros (también llamados argumentos) que se colocan entre paréntesis. Veamos un ejemplo de un saludo personalizado usando un parámetro. Primero la definición:
+
+![IMG-06](../assets/06.png)
+
+Ahora podemos utilizar nuestro saludo personalizado.
+
+![IMG-07](../assets/07.png)
+
+¿Puedes ver lo que está pasando aquí? Al usar **saludo** podemos enviar diferentes nombres para personalizar el resultado. También puedes notar que esto se parece a las declaraciones impresas anteriores. En Python, imprimir es un ejemplo de función incorporada. Cuando llamamos a la función de `print()`, los parámetros entre paréntesis le indican a la función qué imprimir.
+
+Discutiremos los parámetros en detalle más adelante. Por el momento lo importante a recordar es que los paréntesis deben incluirse después del nombre de la función siempre que queramos ejecutar una función. Esto es cierto incluso cuando no se proporcionan parámetros. Por ejemplo, puede crear una línea de salida en blanco usando `print` sin ningún parámetro.
+
+![IMG-08](../assets/08.png)
+
+Pero si escribes sólo el nombre de la función, omitiendo los paréntesis, la función en realidad no se ejecutará. En cambio, una sesión interactiva de Python mostrará algún resultado que indique a qué función se refiere ese nombre, como muestra esta interacción:
+
+![IMG-09](../assets/09.png)
+
+El texto extraño 0x101211da0 es la ubicación (dirección) en la memoria de la computadora donde se almacena la definición de la función de saludo. Si estás probando esto en tu propia computadora, es casi seguro que verás una dirección diferente.
+
+Un problema al ingresar funciones interactivamente en un shell de Python como lo hicimos con los ejemplos de **hola** y **saludo** es que las definiciones se pierden cuando salimos del shell. Si queremos volver a utilizarlos la próxima vez, tendremos que escribirlos de nuevo. Los programas generalmente se crean escribiendo definiciones en un archivo separado llamado **módulo** o **script**. Este archivo se guarda en la memoria secundaria para que pueda usarse una y otra vez.
+
+Un archivo de **módulo** es simplemente un archivo de texto y puede crear uno usando cualquier aplicación para editar texto, como un bloc de notas o un procesador de textos, siempre que guarde su programa como un archivo de "texto sin formato". Un tipo especial de aplicación conocida como **Entorno de Desarrollo Integrado (IDE)** simplifica el proceso. 
+
+Un IDE está diseñado específicamente para ayudar a los programadores a escribir programas e incluye funciones como sangría automática, resaltado de colores y desarrollo interactivo. IDLE es un buen ejemplo. Hasta ahora hemos estado usando IDLE como shell de Python, pero en realidad es un entorno de desarrollo simple pero completo.
+
+Ilustremos el uso de un archivo de módulo escribiendo y ejecutando un programa completo. Nuestro programa explorará un concepto matemático conocido como caos.
+
+A lo largo de la guía desarrollaremos varios programas, por lo que sugeriría que crees una carpeta para mantener todos tus programas organizados y juntos en un espacio dedicado en tu área de documentos personales.
+
+El proceso se puede hacer de diferentes maneras, pero yo ilustraré como hacerlo mediante una línea de comandos (**Terminal** en caso de Mac y **PowerShell** en caso de Windows) y el editor de código VSCode, si no tienes instalado el editor de código te sugerimos seguir nuestra guía de instalación de [VSCode](../Guías/02_Instalación_VSCode.md).
+
+Comencemos abriendo la aplicación de línea de comandos correspondiente. 
+
+**MacOS**
+
+- Presiona la combinación de teclas `<COMMAND>` y `<ESPACIO>` (cuando hablemos de combinaciones de teclas escibiremos las diferentes teclas separadas por un símbolo `+`, ejemplo:`<COMMAND> + <ESPACIO>`) para desplegar el buscador spotlight.
+
+    ![IMG-10](../assets/10.png)
+
+- Escribe "Terminal" en la barra de búsqueda de spotlight.
+
+    ![IMG-11](../assets/11.png)
+
+- Notarás que una aplicación está resaltada en gris, bastará con presionar la tecla `<ENTER>` para ejecutarla y abrirá una pantalla (la interfaz difererirá de la que yo muestro), a partir de este momento me referiré a esta interfaz que acabamos de abrir como **shell**.
+
+    ![IMG-12](../assets/12.png)
+
+**Windows**
+
+- Presiona la combinación de teclas `<WINDOWS>` y `<R>` (cuando hablemos de combinaciones de teclas escibiremos las diferentes teclas separadas por un símbolo `+`, ejemplo:`<WINDOWS> + <R>`) para desplegar la aplicación run.
+
+    ![IMG-13](../assets/13.png)
+
+- Escribe "powershell" en la barra de búsqueda.
+
+    ![IMG-14](../assets/14.png)
+
+- Para ejecutar la aplicación bastará con presionar la tecla `<ENTER>` o dar click en el botón "`OK`". Abrirá una pantalla como la siguiente, a partir de este momento me referiré a esta interfaz que acabamos de abrir como **shell**.
+
+    ![IMG-15](../assets/15.png)
+
+Deberemos crear la carpeta donde guardaremos los programas que realicemos durante esta guía, situarnos en ella y abrirla en el editor de código, para ello dentro de nuestra shell (no importa si es Windows o Mac) ingresaremos los siguientes comandos:
+
+```LINUX
+mkdir ./intro_progra
+```
+```LINUX
+cd ./intro_progra
+```
+```LINUX
+code .
+```
+
+![IMG-16](../assets/16.png)
+
+Si todo el paso anterior se ejecutó correctamente, se debió abrir la aplicación Visual Studio Code, primero encontraremos una advertencia que nos pregunta si confiamos en el autor de la carpeta "intro_progra", como nosotros mismos somos el autor, sí podemos confiar, así que debemos dar click en el botón que dice "Sí, confío en los autores (Yes, I trust the authors)".
+
+![IMG-17](../assets/17.png)
+
+Se removerá la ventana de autorización y tendremos nuestro editor listo para trabajar.
+
+![IMG-18](../assets/18.png)
+
+Comenzaremos ubicando el explorador de archivos, si no se ha personalizado la interfaz, lo encontraremos en la parte izquierda.
+
+![IMG-19](../assets/19.png)
+
+En el explorador tendremos varíos íconos, de izquierda a derecha, el primero nos permitirá crear un nuevo archivo, el segundo crear una nueva carpeta, el tercero refrescar el explorador y el cuarto colapsar los folder abiertos en el explorador, de momento solo interactuaremos con el primer botón.
+
+Damos click en él e inmediatamente por debajo se habilitará un recuadro que nos permitirá escribir, ahí ingresaremos el nombre de nuestro fichero, en este caso será "*01_caos.py*" y una vez terminemos de escribir presionaremos la tecla `<ENTER>`.
+
+![IMG-20](../assets/20.png)
+
+En la parte derecha del editor encontraremos nuestro archivo *01_caos.py* listo para ser editado, ahí pegamos el siguiente código.
+
+```python
+# caos.py
+# Un programa que ilustra una conducta caótica
+
+def main():
+    print("Este programa ilustra una función caótica") 
+    x = eval(input("Ingresa un número entre 0 y 1: ")) 
+    for i in range(10):
+        x = 3.9 * x * (1 - x)
+        print(x)
+
+main()
+```
+
+Una vez que lo hayas escrito, guarda el script. 
+
+La extensión `.py` indica que se trata de un módulo de Python. Ten cuidado donde guardas tus programas. Asegúrate de navegar hasta una carpeta que tengas bien ubicada. 
+
+
+En este punto, es posible que estés intentando encontrarle sentido a lo que acabas de copiar. Puedes ver que este ejemplo en particular contiene líneas para definir una nueva función llamada "*main*". (Los programas suelen colocarse en una función llamada *main*). La última línea del archivo es el comando para invocar esta función. No te preocupes si no comprendes qué hace realmente main; lo discutiremos en la siguiente sección. El punto aquí es que una vez que tenemos un programa guardado en un archivo de módulo como este, podemos ejecutarlo cuando queramos.
+
+Nuestro programa se puede ejecutar de varias maneras diferentes que dependen del sistema operativo real y del entorno de programación que estés utilizando. Si estás utilizando un sistema de ventanas, probablemente puedas ejecutar un programa Python haciendo clic (o haciendo doble clic) en el icono del archivo del módulo. En una situación de línea de comando, puedes escribir un comando como:
+
+ ```python
+ python3 01_caos.py
+ ```
+
+
+
+
 ***
 
 ## 1.7. Dentro de un programa de Python
